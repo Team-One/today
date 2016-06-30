@@ -49,17 +49,9 @@
           var eventTimeStart = formatDate(eventdate, defaults.startTime.trim());
           var eventTimeEnd = formatDate(eventEnd, defaults.endTime.trim());
 
-
-          // console.log(item.start.timeZone);
-          // console.log(eventdate);
-          // console.log(item.start.dateTime);
-          // console.log(item.end.dateTime);
-          // console.log(theEvent);
-          // console.log(eventEnd);
-          // console.log(eventEnd);
-          // console.log(defaults.endTime.trim());
-          s ='<div title="Add to Calendar" class="addeventatc perEvent"> Add To Calendar <span class="start">'+ theEvent +'</span> <span class="end">'+ theEventEnd +'</span> <span class="timezone"> America/Chicago</span> <span class="title">'+ summary +'</span> <span class="date_format">MM/DD/YYYY</span><span class="addeventatc_icon"></span></div>';
-          s +='<div class="eventdate">'+ eventDate +'</div>';
+          
+          // s ='<div title="Add to Calendar" class="addeventatc perEvent"> Add To Calendar <span class="start">'+ theEvent +'</span> <span class="end">'+ theEventEnd +'</span> <span class="timezone"> America/Chicago</span> <span class="title">'+ summary +'</span> <span class="date_format">MM/DD/YYYY</span><span class="addeventatc_icon"></span></div>';
+          s ='<div class="eventdate">'+ eventDate +'</div>';
           s +='<div class="eventTime"> at '+ eventTimeStart +'</div>';
           s +='<div class="eventTime"> to '+ eventTimeEnd +'</div>';
 
@@ -72,7 +64,6 @@
 					}
 
 					$($div).append('<li>' + s + '</li>');
-
         });
       },
       error: function(xhr, status) {
