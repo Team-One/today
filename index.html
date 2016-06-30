@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		 <meta http-equiv="refresh" content="1800">
+  		<!-- Add to home screen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Weather App">
+		<link rel="apple-touch-icon" href="./media/images/launcher-icon-3x.png">
+		<meta name="msapplication-TileImage" content="./media/images/launcher-icon-3x.png">
+		<meta name="msapplication-TileColor" content="#2F3BA2">
+		<title>Team One Today</title>
+		<link rel="manifest" href="./manifest.json">
+		<link href="media/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<!-- <script type="text/javascript" src="./media/js/atc.min.js" async defer></script> -->
+		<!-- <script>
+			window.location.reload(true);
+		</script> -->
+		
+	</head>
+	<body>
+		<header>
+			<div class="media-text diag text-anim-finish" style="color: white;">
+				<h1 class="title-top" style="color: white;">TEAM ONE</h1>
+				<hr> 
+				<h1 class="title-bottom" style="color: white;">TODAY</h1>
+			</div>
+		</header>
+		<p>Check here for a collection of all of the events happening around the agency. Events are updated daily, so check back often!</p>
+			
+
+
+		<div id="eventlist"></div>
+		<script type="text/javascript" src="./media/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async></script>
+		<script type="text/javascript" src="./media/js/calendar.js"></script>
+
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+		<script type="text/javascript">
+			jQuery(function ($) {
+				$('#eventlist').gCalReader({
+					calendarId:'creativetech.teamone@gmail.com',
+					apiKey:'AIzaSyDN7tVbVYt6jBOTo0VPe6uP_FfKFl8A39o',
+					errorMsg:'No events in calendar',
+					maxEvents: 10,
+					futureEventsOnly: true,
+					sortDescending: false
+				});
+			});
+		</script>
+
+		<!-- <script src="./media/js/main.js" async></script> -->
+	</body>
+</html>
